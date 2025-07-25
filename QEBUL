@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Əşrəf Hansı Ixtisasa Qəbul Olacaq?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 50px auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .options {
+      text-align: left;
+      margin-top: 20px;
+    }
+    .option {
+      margin: 10px 0;
+    }
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .result {
+      display: none;
+      margin-top: 30px;
+      font-size: 24px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Əşrəf Hansı Ixtisasa Qəbul Olacaq?</h1>
+
+    <div class="options">
+      <label class="option"><input type="radio" name="choice" value="Kibertəhlükəsizlik (dövlət sifarişli)"> Kibertəhlükəsizlik (dövlət sifarişli)</label><br>
+      <label class="option"><input type="radio" name="choice" value="Veb dizayn və proqram təminatı (ödənişli)"> Veb dizayn və proqram təminatı (ödənişli)</label><br>
+      <label class="option"><input type="radio" name="choice" value="Kibertəhlükəsizlik (ödənişli)"> Kibertəhlükəsizlik (ödənişli)</label><br>
+      <label class="option"><input type="radio" name="choice" value="Kompüter sistemlərində proqramlaşdırma (ödənişli)"> Kompüter sistemlərində proqramlaşdırma (ödənişli)</label><br>
+      <label class="option"><input type="radio" name="choice" value="Interyer dizayn (dövlət sifarişli)"> Interyer dizayn (dövlət sifarişli)</label>
+    </div>
+
+    <button onclick="showResult()">Next</button>
+
+    <div class="result" id="resultText">
+      SƏN ÇOX GÖZƏL İNSANSAN!<br>
+      VƏ TƏBİİ Kİ, ƏŞRƏF QƏBUL OLACAQ!<br>
+      🎓🔥💻<br>
+      <span style="font-size: 16px; color: #555;">(Əgər qəbul olmazsan, serveri biz sındırariq. 😎)</span>
+    </div>
+  </div>
+
+  <script>
+    function showResult() {
+      const selected = document.querySelector('input[name="choice"]:checked');
+      if (!selected) {
+        alert("Zəhmət olmasa bir ixtisas seç!");
+        return;
+      }
+      document.getElementById("resultText").style.display = "block";
+    }
+  </script>
+</body>
+</html>
